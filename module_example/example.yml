@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: Get a file from an host and extract it
+      url_extract:
+        url: http://192.168.1.100/lw2.tar 
+        dest: /home/dsteffen/test
