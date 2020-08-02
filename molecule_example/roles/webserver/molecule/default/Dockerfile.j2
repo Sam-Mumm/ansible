@@ -1,0 +1,7 @@
+FROM debian:10
+
+RUN groupadd -g 2000 dsteffen \
+&& useradd -m -u 2001 -g dsteffen dsteffen \
+&& apt update \
+&& apt install python3 -y \
+&& apt clean

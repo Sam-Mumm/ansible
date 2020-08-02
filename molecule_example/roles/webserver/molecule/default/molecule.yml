@@ -1,0 +1,14 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: debian
+    pre_build_image: false
+    image: docker.io/debian:10
+    dockerfile: ./Dockerfile.j2
+provisioner:
+  name: ansible
+verifier:
+  name: testinfra
