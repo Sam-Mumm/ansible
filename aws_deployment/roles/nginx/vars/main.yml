@@ -1,0 +1,2 @@
+greeting: "Welcome to the first nginx running in ec2"
+default_document_root: "/var/www/html"

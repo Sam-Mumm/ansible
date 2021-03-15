@@ -1,0 +1,2 @@
+aws_public_ssh_key: "/home/dsteffen/Development/ssh_keys/aws/aws.pub"
+aws_private_ssh_key: "/home/dsteffen/Development/ssh_keys/aws/aws"

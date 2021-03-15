@@ -1,0 +1,21 @@
+region: eu-central-1
+instance_type: t2.micro
+ami: ami-0767046d1677be5a0     # Ubuntu
+project_name: webapp
+keypair_name: "my_keypair"
+count_instances: 1
+security_group: "webserver_group"
+tags:
+  os: "ubuntu"
+  purpose: "webserver"
+  service: "nginx"
+
+# Konfiguration von zusätzlichen Speicher
+# Falls kein zusätzlicher Speicher benötigt wird:
+# storage_config: []
+
+storage_config:
+  - delete_on_termination: yes
+    device_name: "/dev/sdd"
+    volume_size: 10
+    volume_type: "gp2"

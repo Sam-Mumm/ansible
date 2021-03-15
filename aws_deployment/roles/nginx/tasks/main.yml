@@ -1,0 +1,19 @@
+---
+- name: "Install nginx"
+  apt:
+    name: nginx
+    state: latest
+    update_cache: yes
+  register: apt_result
+  retries: 10
+  until: apt_result is success
+
+- name: "Start and enable nginx"
+  systemd:
+    name: nginx
+    enabled: yes
+
+- name: "Create default landing Page"
+  copy:
+    dest: "{{ default_document_root }}/index.html"
+    content: "{{ greeting }}"

@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  roles:
+    - start_ec2
+
+#- hosts: aws
+#  remote_user: ubuntu
+#  become: yes
+#  roles:
+#    - nginx
